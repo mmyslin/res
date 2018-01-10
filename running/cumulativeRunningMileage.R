@@ -36,5 +36,5 @@ for(i in 1:length(cr2018$trip_miles)){
   crtotal18[i] = sum(cr2018$trip_miles[1:i])
 }
 points(cr2018$date-365, crtotal18, col="green", type="b")
-
+abline(v=Sys.Date()-365, col="gray")
 crtotal18
