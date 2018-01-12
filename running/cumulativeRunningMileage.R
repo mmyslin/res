@@ -24,7 +24,7 @@ for(i in 1:length(cr2017$trip_miles)){
 }
 
 datemax = cr2017$date[15]
-milemax = 70
+milemax = 100
 plot(cr2017$date, crtotal17, ylim=c(0,milemax), xlim=c(cr2017$date[1], datemax), type="b")
 grid(nx=datemax - cr2017$date[1]+1, ny=milemax/5)
 text(datemax-1, 0, datemax)
