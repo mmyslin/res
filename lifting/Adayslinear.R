@@ -13,11 +13,11 @@ con1 <- dbConnect(drv, host="markdbinstance.cyld5xllawz7.us-west-2.rds.amazonaws
 #buildMotionOutcome = dbGetQuery(con1, paste(scan(file="/Users/markmyslin/Google Drive/Skunkworks/MTDmodelGranular/SQLQueries/dismiss_motion_opinion.sql", what="char", sep="\n"), collapse=" "))
 
 mark_lift_a = dbGetQuery(con1, "select * from lift_a")
-mark_lift_a$date = as.Date(mark_lift_a$string_date, format="%T %F")
+mark_lift_a$date = as.Date(mark_lift_a$date, format="%T %F")
 
 mark_lift_a = mark_lift_a[order(mark_lift_a$date),]
 andersen_lift_a = dbGetQuery(con1, "select * from lift_a_andersen")
-andersen_lift_a$date = as.Date(andersen_lift_a$string_date, format="%F")
+andersen_lift_a$date = as.Date(andersen_lift_a$date, format="%F")
 
 head(mark_lift_a)
 
