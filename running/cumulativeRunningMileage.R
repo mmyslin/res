@@ -23,8 +23,8 @@ for(i in 1:length(cr2017$trip_miles)){
   crtotal17[i] = sum(cr2017$trip_miles[1:i])
 }
 
-datemax = cr2017$date[15]
-milemax = 125
+datemax = cr2017$date[20]
+milemax = 150
 plot(cr2017$date, crtotal17, ylim=c(0,milemax), xlim=c(cr2017$date[1], datemax), type="b")
 grid(nx=datemax - cr2017$date[1]+1, ny=milemax/5)
 text(datemax-1, 0, datemax)
@@ -36,5 +36,4 @@ for(i in 1:length(cr2018$trip_miles)){
   crtotal18[i] = sum(cr2018$trip_miles[1:i])
 }
 points(cr2018$date-365, crtotal18, col="green", type="b")
-abline(v=Sys.Date()-365.5, col="gray")
 crtotal18
